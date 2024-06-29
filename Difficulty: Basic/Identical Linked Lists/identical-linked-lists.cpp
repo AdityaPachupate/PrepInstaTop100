@@ -65,9 +65,7 @@ struct Node {
 
 // Function to check whether two linked lists are identical or not.
 bool areIdentical(struct Node *head1, struct Node *head2) {
-    // Code here
-    // Code here
-  Node *h1=head1, *h2=head2;
+    Node *h1=head1, *h2=head2;
     
     while(h1 && h2){
         if(h1->data != h2->data){
