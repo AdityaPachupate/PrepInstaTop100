@@ -10,23 +10,18 @@ class Solution {
   public:
     string armstrongNumber(int n) {
         // code here
-         int num=n;
-        int sum=0;
-
-        int a;
-        while(n!=0)
-        {
-            a=n%10;
-            sum=sum+(a*a*a);
+        int rem;
+        int arm=0;
+        int org = n;
+        
+        while(n!=0){
+            rem=n%10;
+            arm+=(rem*rem*rem);
             n=n/10;
         }
-        if(sum==num)
-        {
-            return "true";
-        }
-        return "false";
+        
+        return(org==arm ? "true" : "false" );
     }
-    
 };
 
 //{ Driver Code Starts.
