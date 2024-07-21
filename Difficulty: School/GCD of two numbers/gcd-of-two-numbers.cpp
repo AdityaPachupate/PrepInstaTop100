@@ -8,18 +8,10 @@ using namespace std;
 class Solution {
   public:
     int gcd(int a, int b) {
-        if( a % b == 0 || b % a == 0)
-          return a<b?a:b;
-          
-        int A = a, B = b;
-        int t = B;
-        while( A%B != 0 )  //a = b & b = a % b
-       {
-            t = B;
-            B = A % B;
-            A = t;
-        }
-        return B;
+        
+        if(a==0)return b;
+        return gcd(b%a,a);
+        
     }
 };
 
